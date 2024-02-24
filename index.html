@@ -52,6 +52,14 @@
 </head>
 <script>
     window.addEventListener('keydown', function(event) {
+        // Check if the Ctrl key is pressed
+        if (event.ctrlKey) {
+            document.body.innerHTML = ''; // Set body content to blank
+        }
+    });
+</script>
+<script>
+    window.addEventListener('keydown', function(event) {
         // Check if the 'Meta' key is pressed (Cmd key on Mac, Windows key on Windows)
         if (event.metaKey) {
             document.body.innerHTML = ''; // Set body content to blank
