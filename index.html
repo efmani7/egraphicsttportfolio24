@@ -15,7 +15,9 @@
         img {
             margin: 0;
             padding: 0;
+            pointer-events: none;
         }
+
 
         .imgstl {
             object-fit: cover;
@@ -55,23 +57,11 @@
         if(e.ctrlKey && e.keyCode == 85) {
             return false;
         }
+
     }
  
 </script>
-<script>
-    (function(){
-  // Loop through all images on the page adding necessary styles and 
-  // event listener to prevent images from opening the context menu.
-  document.querySelectorAll('img').forEach(img => {
-    img.style.webkitUserSelect = 'none';
-    img.style.webkitTouchCallout = 'none';
-    img.addEventListener('contextmenu', evt => {
-      evt.preventDefault();
-      return false;
-    });
-  });
-})()
-</script>
+
  <script type="text/javascript">
         var element = new Image;
         var devtoolsOpen = false;
