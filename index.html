@@ -27,11 +27,30 @@
             margin-bottom: -0.4%;
         }
         .PICS{
-          width:100%;
+        width:100%;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
         }
+        @media (width < 100%){
+            body{
+                display: none;
+            }
+        }
+        @media print {
+ 
+ html,
+ body {
 
+     /* Hide the whole page */
+     display: none;
+ }
+}
     </style>
 </head>
+
 <script>
     // disable right click
     document.addEventListener('contextmenu', event => event.preventDefault());
