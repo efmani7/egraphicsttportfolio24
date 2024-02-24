@@ -27,6 +27,17 @@
         .PICS{
           width:100%;
         }
+        .overlay{
+            object-fit: cover;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+           left: 0;
+           opacity: 0.5; /* Adjust opacity as needed */
+        }
+  
 
     </style>
 </head>
@@ -79,7 +90,8 @@
 
     
 <body oncontextmenu=" return disableRightClick();">
-    <div class="PICS">
+   
+    <div  class="PICS">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-1.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-2.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-3.jpg" alt="">
@@ -95,7 +107,8 @@
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-6.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-7.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-8.jpg" alt="">
-    </div>
+        <img class="overlay" src="egraphicsportfoliofiles/transparent-overlay.png" alt="Transparent Overlay">
+</div>
 </body>
 <script  src="app.js" ></script>
 </html>
