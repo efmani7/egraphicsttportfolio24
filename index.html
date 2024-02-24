@@ -27,9 +27,58 @@
         .PICS{
           width:100%;
         }
+
     </style>
 </head>
-<body>
+<script>
+    // disable right click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+ 
+    document.onkeydown = function (e) {
+ 
+        // disable F12 key
+        if(e.keyCode == 123) {
+            return false;
+        }
+ 
+        // disable I key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 73){
+            return false;
+        }
+ 
+        // disable J key
+        if(e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+            return false;
+        }
+ 
+        // disable U key
+        if(e.ctrlKey && e.keyCode == 85) {
+            return false;
+        }
+    }
+ 
+</script>
+ <script type="text/javascript">
+        var element = new Image;
+        var devtoolsOpen = false;
+        element.__defineGetter__("id", function() 
+        {
+            devtoolsOpen = true;
+             
+            window.location.replace("http://www.w3schools.com");
+            
+            // This only executes when devtools is open.
+        });
+        setInterval(function() {
+            devtoolsOpen = false;
+            console.log(element);
+             
+        }, 1000);
+
+    </script>
+
+    
+<body oncontextmenu=" return disableRightClick();">
     <div class="PICS">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-1.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-2.jpg" alt="">
@@ -47,7 +96,6 @@
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-7.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-8.jpg" alt="">
     </div>
-
-
 </body>
+<script  src="app.js" ></script>
 </html>
