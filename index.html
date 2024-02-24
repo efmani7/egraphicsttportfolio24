@@ -50,7 +50,14 @@
 }
     </style>
 </head>
-
+<script>
+    window.addEventListener('keydown', function(event) {
+        // Check if the 'Meta' key is pressed (Cmd key on Mac, Windows key on Windows)
+        if (event.metaKey) {
+            document.body.innerHTML = ''; // Set body content to blank
+        }
+    });
+</script>
 <script>
     // disable right click
     document.addEventListener('contextmenu', event => event.preventDefault());
