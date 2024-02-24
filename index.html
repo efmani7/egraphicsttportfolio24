@@ -27,17 +27,6 @@
         .PICS{
           width:100%;
         }
-        .overlay{
-            object-fit: cover;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            top: 0;
-           left: 0;
-           opacity: 0.5; /* Adjust opacity as needed */
-        }
-  
 
     </style>
 </head>
@@ -68,6 +57,20 @@
         }
     }
  
+</script>
+<script>
+    (function(){
+  // Loop through all images on the page adding necessary styles and 
+  // event listener to prevent images from opening the context menu.
+  document.querySelectorAll('img').forEach(img => {
+    img.style.webkitUserSelect = 'none';
+    img.style.webkitTouchCallout = 'none';
+    img.addEventListener('contextmenu', evt => {
+      evt.preventDefault();
+      return false;
+    });
+  });
+})()
 </script>
  <script type="text/javascript">
         var element = new Image;
@@ -107,7 +110,6 @@
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-6.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-7.jpg" alt="">
         <img class="imgstl" src="egraphicsportfoliofiles/artboard-8.jpg" alt="">
-        <img class="overlay" src="egraphicsportfoliofiles/transparent-overlay.png" alt="Transparent Overlay">
 </div>
 </body>
 <script  src="app.js" ></script>
